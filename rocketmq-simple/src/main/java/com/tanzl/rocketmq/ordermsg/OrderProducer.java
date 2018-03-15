@@ -47,7 +47,9 @@ public class OrderProducer {
    
                 System.out.println(sendResult + ", body:" + body);  
             }  
-              
+            /**
+             * 根据订单取模，将同订单发送到同一队列。 队列不可用（队列与broker对应关系），策略如何？
+             */
             producer.shutdown();  
   
         } catch (MQClientException e) {  
