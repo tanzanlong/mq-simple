@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
+import com.alibaba.rocketmq.client.consumer.DefaultMQPullConsumer;
 import com.alibaba.rocketmq.client.consumer.DefaultMQPushConsumer;
 import com.alibaba.rocketmq.client.consumer.listener.ConsumeOrderlyContext;
 import com.alibaba.rocketmq.client.consumer.listener.ConsumeOrderlyStatus;
@@ -14,7 +15,8 @@ import com.alibaba.rocketmq.common.message.MessageExt;
 
 public class ConsumerInOrder {
     public static void main(String[] args) throws MQClientException {  
-        DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("please_rename_unique_group_name_3");  
+        DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("please_rename_unique_group_name_3");
+        DefaultMQPullConsumer pullconsumer=new DefaultMQPullConsumer();
         consumer.setNamesrvAddr("192.168.212.60:9876");  
         /** 
          * 设置Consumer第一次启动是从队列头部开始消费还是队列尾部开始消费<br> 

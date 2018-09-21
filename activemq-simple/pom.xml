@@ -278,6 +278,14 @@
 		<artifactId>aspectjrt</artifactId>
 		<version>1.8.9</version>
 	</dependency>
+
+	<!-- https://mvnrepository.com/artifact/org.apache.activemq/activemq-all -->
+	<dependency>
+		<groupId>org.apache.activemq</groupId>
+		<artifactId>activemq-all</artifactId>
+		<version>5.14.5</version>
+	</dependency>
+	
 	
     </dependencies>
 
