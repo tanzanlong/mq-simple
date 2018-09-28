@@ -14,9 +14,9 @@ import kafka.consumer.KafkaStream;
 import kafka.javaapi.consumer.ConsumerConnector;
 
 public class ConsumerTest {
-	@Test
-	public void cousumer(){
-		Properties props = new Properties();
+    @Test
+    public void cousumer(){
+        Properties props = new Properties();
       props.put("zookeeper.connect", "10.2.121.48:2181");
       props.put("zookeeper.session.timeout.ms", "40000");
       props.put("zookeeper.sync.time.ms", "200");
@@ -33,5 +33,5 @@ public class ConsumerTest {
       while (it.hasNext()) {
           System.out.println("Receive->[" + new String(it.next().message()) + "]");
       }
-	}
+    }
 }
