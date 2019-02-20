@@ -1,13 +1,10 @@
 package com;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.context.embedded.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ImportResource;
@@ -46,15 +43,6 @@ public class Bootstrap extends WebMvcConfigurerAdapter implements SchedulingConf
         return Executors.newScheduledThreadPool(30);
     }
     
-    @Bean  
-    public FilterRegistrationBean  filterRegistrationBean() {  
-        FilterRegistrationBean registrationBean = new FilterRegistrationBean();  
-        List<String> urlPatterns = new ArrayList<String>();  
-        urlPatterns.add("/*");  
-        registrationBean.setUrlPatterns(urlPatterns);  
-        return registrationBean;  
-    }
-
     @Bean
     public MvcTraceFilter traceFilterRegiesty() {     return new MvcTraceFilter(); }
 }

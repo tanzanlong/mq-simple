@@ -1,4 +1,4 @@
-package com.tanzl.rocketmq;
+package com.tanzl.rabbitmq;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -15,10 +15,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @SpringBootApplication
 @Controller
 @EnableAutoConfiguration
-public class RocketmqDemoApplication {
+public class RabbitmqDemoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(RocketmqDemoApplication.class, args);
+		SpringApplication.run(RabbitmqDemoApplication.class, args);
 	}
 	
 	@RequestMapping("/")

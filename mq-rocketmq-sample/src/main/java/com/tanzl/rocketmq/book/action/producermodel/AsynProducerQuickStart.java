@@ -33,7 +33,6 @@ public class AsynProducerQuickStart {
                     public void onSuccess(SendResult sendResult) {
                         System.out.printf( " %s %n " ,sendResult);
                         SendStatus sendStatus=sendResult.getSendStatus();
-                        SendStatus.FLUSH_DISK_TIMEOUT
                     }
                     
                 });
