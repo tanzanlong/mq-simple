@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <parent>
-		<artifactId>mq-simple</artifactId>
+		<artifactId>mq-sample</artifactId>
 		<groupId>com.baibei.accountservice</groupId>
 		<version>1.0.2-SNAPSHOT</version>
 	</parent>
@@ -12,7 +12,7 @@
 	<properties>
 		<maven.deploy.skip>true</maven.deploy.skip>
 	</properties>
-	<artifactId>rocketmq-simple</artifactId>
+	<artifactId>mq-rocketmq-sample</artifactId>
 	<packaging>jar</packaging>
 
     <!--  <modelVersion>4.0.0</modelVersion>
